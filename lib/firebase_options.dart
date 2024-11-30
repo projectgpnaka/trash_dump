@@ -54,7 +54,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyC3d9RPKgHQEH0G1kef7e0WRN8EkpqdUWU',
-    appId: '1:885501349437:android:19798e5c5c79fbc7eb6454',
+    appId: '1:885501349437:android:b5d0e26a43ca3a7feb6454',
     messagingSenderId: '885501349437',
     projectId: 'eco-connect-a2aae',
     storageBucket: 'eco-connect-a2aae.firebasestorage.app',

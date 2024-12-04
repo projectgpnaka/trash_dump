@@ -1,7 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_config/flutter_config.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
+import 'package:waste_management_app/screens/choose_screen.dart';
 import 'package:waste_management_app/screens/login/controller/login_controller.dart';
 import 'package:waste_management_app/screens/login/repository/auth_repository.dart';
 import 'package:waste_management_app/screens/splash/views/splash_screen.dart';
@@ -9,8 +11,9 @@ import 'screens/home/controllers/location_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+    
   await FlutterConfig.loadEnvVariables();
-  await Firebase.initializeApp().then((value) => Get.put(AuthRepository()));
+ // await Firebase.initializeApp().then((value) => Get.put(AuthRepository()));
   Get.put(LoginController());
   Get.put(LocationController());
   runApp(const MyApp());
@@ -28,7 +31,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         fontFamily: 'Poppins',
       ),
-      home: SplashScreen(),
+      home: RoleSelectionScreen(),
     );
   }
 }

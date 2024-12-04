@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:waste_management_app/screens/login/controller/login_controller.dart';
 import 'package:waste_management_app/screens/login/views/components/phone_input_field.dart';
-import 'package:waste_management_app/screens/login/views/enter_otp.dart';
 import 'package:waste_management_app/sharedWidgets/custom_filled_button.dart';
 
 class LoginWithPhone extends StatelessWidget {

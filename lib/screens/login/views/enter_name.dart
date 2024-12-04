@@ -54,6 +54,7 @@ class EnterNameScreen extends StatelessWidget {
                   if (value!.isEmpty) {
                     return 'Please enter a name';
                   }
+                  return null;
                 },
                 controller: loginController.nameTextController,
                 cursorColor: kPrimaryColor,

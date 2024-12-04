@@ -44,12 +44,12 @@ class CartController extends GetxController {
   //* -------- CART RELATED METHODS --------
   void addCartItem(CartItemModel cartItem) {
     if (cartItems.any((element) => element.id == cartItem.id)) {
-      cartItems.forEach((element) {
+      for (var element in cartItems) {
         if (element.id == cartItem.id) {
           element.quantity++;
           element.totalPrice = element.quantity * element.price;
         }
-      });
+      }
     } else {
       cartItems.add(cartItem);
     }
@@ -67,31 +67,31 @@ class CartController extends GetxController {
 
   void calculateTotalPrice() {
     totalPrice.value = 0;
-    cartItems.forEach((cartItem) {
+    for (var cartItem in cartItems) {
       totalPrice.value += cartItem.totalPrice;
-    });
+    }
   }
 
   void incrementQuantity(int id) {
-    cartItems.forEach((element) {
+    for (var element in cartItems) {
       if (element.id == id) {
         element.quantity++;
         element.totalPrice = element.quantity * element.price;
       }
-    });
+    }
 
     calculateTotalPrice();
   }
 
   void decrementQuantity(int id) {
-    cartItems.forEach((element) {
+    for (var element in cartItems) {
       if (element.id == id) {
         if (element.quantity > 1) {
           element.quantity--;
           element.totalPrice = element.quantity * element.price;
         }
       }
-    });
+    }
 
     calculateTotalPrice();
   }
